@@ -1,0 +1,28 @@
+STUDYBUDDY AI - CARA PALING MUDAH (WINDOWS)
+===========================================
+1. Klik kanan file ZIP yang diunduh, lalu pilih "Extract All..." / "Ekstrak Semua".
+   Jangan membuka website dari dalam ZIP. Buka folder hasil ekstraksi.
+2. Buka folder StudyBuddy_AI_SIAP_JALAN hasil ekstraksi.
+3. Klik dua kali JALANKAN_WEBSITE.bat.
+4. Jika Node.js belum terinstal, pasang versi LTS dari https://nodejs.org/
+   kemudian jalankan file .bat tadi lagi.
+5. Tunggu proses pemasangan paket (pertama kali perlu internet).
+6. Browser akan membuka http://localhost:3000 otomatis.
+   Jika tidak otomatis, ketik alamat tersebut di Chrome/Edge.
+7. Jangan menutup jendela terminal saat website dipakai.
+
+UPLOAD MATERI
+- Mendukung PDF berbasis teks, Word .docx, PowerPoint .pptx, dan .txt.
+- Format Word .doc dan PowerPoint .ppt lama perlu disimpan ulang.
+
+MENGAKTIFKAN GEMINI AI
+- Buat API key melalui https://aistudio.google.com/apikey
+- Buka file .env di folder website (file ini dibuat saat pertama kali dijalankan).
+- Isi GEMINI_API_KEY=KUNCI_ANDA dan simpan.
+- Tutup terminal, lalu jalankan JALANKAN_WEBSITE.bat kembali.
+- Tanpa kunci ini, website tetap berfungsi dalam MODE DEMO terbatas.
+- Jangan membagikan kunci API Anda kepada orang lain.
+
+CATATAN
+- localhost:3000 hanya dapat dibuka dari komputer sendiri saat server berjalan.
+- Agar ada link publik untuk orang lain, website perlu di-deploy ke hosting.

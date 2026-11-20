@@ -1,0 +1,47 @@
+STUDYBUDDY AI — CARA MEMBUAT LINK PUBLIK (GITHUB + RENDER)
+============================================================
+
+PENTING: Paket ini adalah KODE WEBSITE SIAP DEPLOY, bukan link publik aktif.
+Anda memerlukan akun GitHub dan Render untuk memublikasikannya.
+
+A. UNGGAH KE GITHUB
+1. Buka https://github.com/ dan login/daftar.
+2. Klik tombol + > New repository.
+3. Nama repository: studybuddy-ai. Pilih Private atau Public.
+4. Klik Create repository.
+5. Klik "uploading an existing file" (atau Add file > Upload files).
+6. Buka ZIP ini dan EKSTRAK SEKALI. Buka folder hasil ekstrak.
+7. Pilih SEMUA ISI folder proyek, bukan ZIP-nya (termasuk server.js,
+   package.json, render.yaml, folder public/). Seret ke halaman upload GitHub.
+   Jika file tersembunyi seperti .env.example tidak terlihat, itu tidak masalah.
+   Pastikan file .env ASLI dengan API key tidak diunggah.
+8. Klik Commit changes.
+
+B. PUBLISH DI RENDER
+1. Buka https://dashboard.render.com/ dan login dengan GitHub.
+2. Klik New > Web Service (atau New > Blueprint untuk render.yaml).
+3. Hubungkan repository studybuddy-ai yang baru dibuat.
+4. Jika memilih Web Service, atur:
+   Runtime: Node
+   Branch: main
+   Build Command: npm install
+   Start Command: npm start
+   Instance: Free (jika tersedia)
+5. Pada Environment tambahkan:
+   GEMINI_API_KEY = kunci Gemini milik Anda
+   GEMINI_MODEL = gemini-2.5-flash
+   Dapatkan kunci sendiri di https://aistudio.google.com/apikey
+   JANGAN masukkan API key di GitHub atau chat publik.
+6. Tekan Deploy Web Service. Tunggu sampai status Live.
+7. Salin URL HTTPS .onrender.com yang ditampilkan oleh Render.
+8. Buka link tersebut lewat mode Incognito atau HP lain untuk menguji.
+
+C. CATATAN PENTING
+- Dengan Free instance, website mungkin lambat dibuka setelah lama tidak dipakai.
+- Fitur AI sebenarnya membutuhkan GEMINI_API_KEY di Render.
+- Tanpa API key, fitur berbasis AI hanya demo; unggah file tetap bisa diuji.
+- PDF yang hanya berisi gambar hasil scan tidak bisa diekstrak tanpa OCR.
+- File Word didukung untuk .docx, PowerPoint untuk .pptx; bukan .doc/.ppt lama.
+- Riwayat belajar disimpan di browser masing-masing pengunjung, bukan server.
+- Kunci Gemini mungkin memiliki batas penggunaan atau biaya tergantung akun.
+- Render dapat mengubah menu/pilihan harga; lihat dashboard untuk detail terbaru.
