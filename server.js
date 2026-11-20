@@ -92,4 +92,7 @@ app.post('/api/generate',async(req,res)=>{
  }catch(e){res.status(502).json({error:e.name==='AbortError'?'Koneksi ke AI terlalu lama. Coba lagi.':e.message});}
 });
 app.use((err,req,res,next)=>res.status(400).json({error:err.code==='LIMIT_FILE_SIZE'?'Ukuran file maksimal 20 MB.':err.message}));
-app.listen(PORT,'0.0.0.0',()=>console.log(`StudyBuddy AI siap di http://localhost:${PORT}`));
+export default app;
+if (process.env.VERCEL !== '1') {
+  app.listen(PORT, '0.0.0.0', () => console.log(`StudyBuddy AI siap di http://localhost:${PORT}`));
+}
